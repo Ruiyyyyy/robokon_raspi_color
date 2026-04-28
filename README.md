@@ -1,5 +1,10 @@
+## Installation
+* Clone the Repository
+
+```
 $ git clone https://git@github.com:Ruiyyyyy/robokon_raspi.git
 $ cd robokon_raspi
+```
 
 # robokon_raspi 
 
@@ -17,8 +22,6 @@ Live Stream Display
 ```
 $ python3 display_camera.py
 ```
-
-$ python3 color_calibrator.py
 
 ## Requirements
 * Hardware: Raspberry Pi (any model) + Raspberry Pi Camera Module (V2, V3, or HQ).
