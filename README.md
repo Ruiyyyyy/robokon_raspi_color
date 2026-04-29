@@ -1,34 +1,50 @@
-## Installation
-* Clone the Repository
+## Color Calibrator for OpenCV
 
-```
-$ git clone https://git@github.com:Ruiyyyyy/robokon_raspi.git
-$ cd robokon_raspi
-```
+* This tool allows you to find the optimal HSV (Hue, Saturation, Value) ranges for object detection in real-time. It is particularly useful for robotics projects, such as tracking colored balls or following lines.
 
-# robokon_raspi 
+# How it works
 
-## Features
-* Live Camera Stream: Real-time video feed using the official Raspberry Pi Camera Module.
+* The script captures live video from your camera and applies a color filter. By adjusting the trackbars (sliders), you can filter out background noise and isolate a specific object by its color.
 
-## Install Dependencies
-Make sure you have the necessary libraries installed on your Raspberry Pi:
+# Preparation
+
+* Raspberry Pi (or PC with a webcam)
+* Python 3.x
+* OpenCV and NumPy libraries
+
 ```
 $ pip install opencv-python numpy
 ```
 
+# Setup
+
+* Clone this repository and ensure the script has execution permissions:
+
+```
+$ git clone https://github.com/Ruiyyyyy/robokon_raspi_color.git
+$ cd robokon_raspi_color
+```
+
 ## Usage
-Live Stream Display
+
+* Run the script using Python:
+
 ```
-$ python3 display_camera.py
+$ python3 color.py
 ```
 
-## Requirements
-* Hardware: Raspberry Pi (any model) + Raspberry Pi Camera Module (V2, V3, or HQ).
-* OS: Raspberry Pi OS with Desktop environment (required for GUI windows).
-* Python: 3.7+
+# Instructions:
 
-## LICENSE
+* Adjust the Sliders: Move the H, S, and V sliders in the "Calibrador" window.
+
+* Isolate the Object: Watch the "Mask" or "Resultado" window. Your goal is to make the target object appear pure white (in the Mask) or in its original color (in Resultado), while the background becomes completely black.
+
+* Get the Values: Once isolated, look at the values on the sliders. You can use these min and max values in your actual robot vision code.
+
+* Exit: Press the q key on your keyboard to stop the program.
+
+# License
 
 * This software package is licensed under the 3-Clause BSD License.
 * © 2026 Ruiyyyyy
+
